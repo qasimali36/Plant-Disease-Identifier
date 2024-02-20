@@ -21,7 +21,7 @@ class AboutUsScreen extends StatelessWidget {
           child: Center(
             child: Padding(
               padding: const EdgeInsets.only(
-                  left: 20, right: 20, top: 50, bottom: 50),
+                  left: 20, right: 20, top: 200, bottom: 200),
               child: Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
@@ -30,7 +30,7 @@ class AboutUsScreen extends StatelessWidget {
                     color: Colors.green,
                     width: 3.0,
                   ),
-                  color: Colors.green.withOpacity(0.5),
+                  color: Colors.green.withOpacity(0.3),
                 ),
                 child: const Column(
                   mainAxisAlignment: MainAxisAlignment.center,

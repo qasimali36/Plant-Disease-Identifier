@@ -14,6 +14,7 @@ class _LoginScreenState extends State<LoginScreen> {
   late String _password;
   bool _rememberMe = false;
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Form(
               key: _formKey,
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
@@ -47,6 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   _buildPasswordTextField(),
                   const SizedBox(height: 20),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Checkbox(
                         value: _rememberMe,
@@ -101,7 +103,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                     child: const Text('Login'),
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.grey[700], // Dark gray button color
+                      primary: Colors.green, // Dark gray button color
                       onPrimary: Colors.white,
                     ),
                   ),
@@ -131,7 +133,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Widget _buildEmailTextField() {
     return Container(
-      width: 300,
+      width: 345,
       child: TextFormField(
         decoration: InputDecoration(
           filled: true,
@@ -162,7 +164,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Widget _buildPasswordTextField() {
     return Container(
-      width: 300,
+      width: 345,
       child: TextFormField(
         obscureText: true,
         decoration: InputDecoration(

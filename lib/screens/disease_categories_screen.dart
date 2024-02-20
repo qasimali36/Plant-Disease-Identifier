@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant_disease_detection/screens/drawer.dart';
 
 class DiseaseCategoriesScreen extends StatelessWidget {
   const DiseaseCategoriesScreen({super.key});
@@ -10,6 +11,7 @@ class DiseaseCategoriesScreen extends StatelessWidget {
         title: const Text('Disease Categories'),
         backgroundColor: Colors.green,
       ),
+      drawer: CustomDrawer(),
       body: SingleChildScrollView(
         child: Container(
           decoration: const BoxDecoration(

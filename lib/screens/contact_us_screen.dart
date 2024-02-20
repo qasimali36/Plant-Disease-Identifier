@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant_disease_detection/screens/drawer.dart';
 
 class ContactUsScreen extends StatelessWidget {
   @override
@@ -8,35 +9,34 @@ class ContactUsScreen extends StatelessWidget {
         title: const Text('Contact Us'),
         backgroundColor: Colors.green,
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('images/background.jpg'),
-              fit: BoxFit.cover,
-            ),
+      drawer: CustomDrawer(),
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('images/background.jpg'),
+            fit: BoxFit.cover,
           ),
-          child: Center(
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text(
-                    'Contact Us',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30,
-                    ),
+        ),
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  'Contact Us',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
                   ),
-                  const SizedBox(height: 20),
-                  _buildContactInfo(),
-                  const SizedBox(height: 20),
-                  _buildSampleText(),
-                ],
-              ),
+                ),
+                const SizedBox(height: 20),
+                _buildContactInfo(),
+                const SizedBox(height: 20),
+                _buildSampleText(),
+              ],
             ),
           ),
         ),
@@ -97,7 +97,7 @@ class ContactUsScreen extends StatelessWidget {
       padding: const EdgeInsets.all(20.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20.0),
-        color: Colors.green.withOpacity(0.5),
+        color: Colors.green.withOpacity(0.3),
       ),
       child: const Text(
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis elit quis libero vehicula fermentum. Nullam ut posuere arcu, eget placerat quam. Vivamus nec massa in lorem fringilla accumsan. Integer ac diam sed risus posuere bibendum. Proin eget ultricies nunc, vitae fermentum justo. Aenean nec diam eu nisi convallis posuere. Nam feugiat efficitur elit at interdum. In in purus vitae enim varius aliquet quis sit amet enim. In in mauris nec est efficitur iaculis. Proin tempor pretium sapien, eget luctus est fermentum id. Mauris ac malesuada sem. Sed consectetur ullamcorper semper.',
